@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head><title>JSON AND JS</title></head>
+    <body>
+        <center>
+            <h2>Javascript async / await</h2>
+            <h1 id="result"></h1>
+            <script>
+                async function add(a,b) {
+                    let response = await a + b;
+                    display(response);
+                }
+                function display(some){
+                    document.getElementById("result").innerHTML = some;
+
+                }
+                add(4,24)
+                    
+                
+            </script>
+            <h2>Js callbacks</h2>
+            <p id="result"></p>
+            <script>
+                function myDisplayer(value) {
+                    document.getElementById("result").innerHTML = value;
+                }
+                function myCalculator(num1, num2, myCallback) {
+                    let sum = num1 + num2;
+                    myCallback(sum);
+
+                }
+                myCalculator(5, 15, myDisplayer);
+            </script>
+        </center>
+    </body>
+</html>
